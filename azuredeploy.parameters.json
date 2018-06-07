@@ -2,22 +2,26 @@
     "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-      "adminUsername": {
-        "value": "Nick"
+      "vmName": {
+          "value": ""
       },
-      "adminPassword": {
-        "reference": {
-          "keyVault": {
-            "id": "/subscriptions/b946e4e9-8dce-4328-99c8-016932d62fbb/resourceGroups/lab3/providers/Microsoft.KeyVault/vaults/Nicksvault"
-          },
-          "secretName": "ubuntuDefaultPassword"
-        }
+      "adminUsername": {
+        "value": "richeney"
+      },
+      "keyVaultName": {
+        "value": "richeneyKeyVault"
+      },
+      "secretName": {
+        "value": "ubuntuDefaultPassword"
       },
       "vnetName": {
           "value": "ubuntuVnet"
       },
       "subnetName": {
           "value": "ubuntuSubnet"
+      },
+      "dnsLabelPrefix": {
+        "value": ""
       }
     }
   }
