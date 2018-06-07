@@ -6,10 +6,10 @@
           "value": ""
       },
       "adminUsername": {
-        "value": "richeney"
+        "value": "Nick"
       },
       "keyVaultName": {
-        "value": "richeneyKeyVault"
+        "value": "NicksKeyVault"
       },
       "secretName": {
         "value": "ubuntuDefaultPassword"

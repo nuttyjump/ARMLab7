@@ -81,11 +81,7 @@
             }
         }
     },
-    "variables": {
-        "keyVaultResourceGroup": "keyVaults",
-        "derivedUri": "Add square brackets around: uri(deployment().properties.templateLink.uri, 'vm.json') ",
-        "vmUri": "https://raw.githubusercontent.com/richeney/arm/master/lab7/vm.json"
-    },
+    "variables": {},
     "resources": [
         {
             "name": "[parameters('vmName')]",
@@ -109,7 +105,7 @@
                     "adminPassword": {
                         "reference": {
                             "keyVault": {
-                              "id": "[resourceId(variables('keyVaultResourceGroup'), 'Microsoft.KeyVault/vaults', parameters('keyVaultName'))]"
+                              "id": "[resourceId('Microsoft.KeyVault/vaults', parameters('keyVaultName'))]"
                             },
                             "secretName": "[parameters('secretName')]"
                         }
@@ -131,7 +127,7 @@
                     }
                 },
                 "templateLink": {
-                    "uri": "[variables('vmUri')]",
+                    "uri": "https://raw.githubusercontent.com/nuttyjump/ARMLab7/master/vm.json",
                     "contentVersion": "1.0.0.0"
                 }
             }
